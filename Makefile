@@ -4,7 +4,7 @@ install:
 	uv pip install ".[dev,test,docs]"
 
 test:
-	pytest
+	PYTHONPATH=. pytest tests/
 
 lint:
 	black src/
