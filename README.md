@@ -22,3 +22,6 @@ make install
 make run
 ```
 
+## Author
+
+Jeremy.
