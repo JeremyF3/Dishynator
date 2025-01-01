@@ -1,6 +1,13 @@
 import streamlit as st
 from ui import setup_page, sidebar_settings, display_results, add_download_button
 from image_processing import load_image, calculate_red_ratio
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 def main():

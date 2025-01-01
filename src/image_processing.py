@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 from PIL import Image
 import io
+from typing import Tuple, Union
+import numpy.typing as npt
 
 
 def load_image(image_file):
@@ -18,7 +20,9 @@ def mask_to_bytes(mask):
     return buf.getvalue()
 
 
-def calculate_red_ratio(image):
+def calculate_red_ratio(
+    image: npt.NDArray[np.uint8]
+) -> Tuple[float, npt.NDArray[np.uint8]]:
     """Calculate the ratio of red pixels in the image."""
     # Convert to HSV for better color detection
     hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)

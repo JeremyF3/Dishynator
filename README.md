@@ -6,8 +6,19 @@ Application to analyze plant images.
 
 Using [uv](https://docs.astral.sh/uv/) to manage python packages.
 
-## Setup
+Python 3.10 is required.
+
+## Installation
 
 ```bash
+uv venv
+source .venv/bin/activate
 make install
 ```
+
+## Usage
+
+```bash
+make run
+```
+
